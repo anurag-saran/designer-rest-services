@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -33,7 +34,8 @@ public class Project {
 	@Size(min=10, message="projectBlob should have atleast 2 characters")
 	@ApiModelProperty(notes="projectBlob should have atleast 2 characters")
 	//@Column(nullable=false)
-	private Clob projectBlob;
+	@Lob
+	private String projectBlob;
 	
 //	@UpdateTimestamp
 //	private LocalDateTime lastUpdatedDate;
@@ -45,7 +47,7 @@ public class Project {
 	}
 
 
-	public Project( String description, String projectName, Clob projectBlob) {
+	public Project( String description, String projectName, String projectBlob) {
 		super();
 		
 		this.description = description;
@@ -79,10 +81,10 @@ public class Project {
 	public void setProjectName(String projectName) {
 		this.projectName = projectName;
 	}
-	public Clob getProjectBlob() {
+	public String getProjectBlob() {
 		return projectBlob;
 	}
-	public void setProjectBlob(Clob projectBlob) {
+	public void setProjectBlob(String projectBlob) {
 		this.projectBlob = projectBlob;
 	}
 	
