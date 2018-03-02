@@ -31,7 +31,7 @@ public class Project {
 	@ApiModelProperty(notes="projectName should have atleast 2 characters")
 	@Column(nullable=false)
 	private String projectName;
-	@Size(min=10, message="projectBlob should have atleast 2 characters")
+	@Size(min=2, message="projectBlob should have atleast 2 characters")
 	@ApiModelProperty(notes="projectBlob should have atleast 2 characters")
 	//@Column(nullable=false)
 	@Lob
