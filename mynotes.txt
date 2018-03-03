@@ -1,1 +1,0 @@
-https://github.com/in28minutes/spring-web-services/tree/master/restful-web-services
