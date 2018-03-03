@@ -7,14 +7,14 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.stereotype.Component;
 
-@Path("/login")
+@Path("/project")
 @Component
-public class LoginResource {
+public class ProjectResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String login() {
-        return "say login";
+        return "say project";
     }
     
 
