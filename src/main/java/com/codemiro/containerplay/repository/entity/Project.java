@@ -2,12 +2,6 @@ package com.codemiro.containerplay.repository.entity;
 
 import javax.persistence.Entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-
 
 /**
  * @author dvsingh
@@ -15,10 +9,6 @@ import lombok.NoArgsConstructor;
  *
  */
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 public class Project extends BaseEntityAudit{
 
@@ -30,5 +20,7 @@ public class Project extends BaseEntityAudit{
 	private String name;
 	private String description;
 	private String remarks;
+	
+	
 	
 }
